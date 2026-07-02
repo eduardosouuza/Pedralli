@@ -1,0 +1,12 @@
+{
+  "name": "pedralli",
+  "version": "1.0.0",
+  "description": "Pedralli - Curadoria, Mercado e Bazar",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

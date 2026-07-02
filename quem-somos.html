@@ -538,10 +538,11 @@
         el.innerHTML = words.map(word => 
           `<span class="reveal-word-container"><span class="reveal-word-inner">${word}&nbsp;</span></span>`
         ).join(' ');
+        el.style.opacity = "1";
       });
 
       // Animate Sub-Hero text reveal on load in sync with preloader exit
-      tl.fromTo(".text-reveal .reveal-word-inner", 
+      tl.fromTo(".hero-custom-bg .text-reveal .reveal-word-inner", 
         { translateY: "115%" },
         {
           translateY: "0%",
@@ -561,12 +562,12 @@
           { translateY: "115%" },
           {
             translateY: "0%",
-            duration: 1.2,
-            ease: "power4.out",
-            stagger: 0.04,
+            duration: 0.7,
+            ease: "power3.out",
+            stagger: 0.02,
             scrollTrigger: {
               trigger: el,
-              start: "top 88%",
+              start: "top 95%",
               toggleActions: "play none none none"
             }
           }
@@ -580,11 +581,11 @@
           {
             opacity: 1,
             y: 0,
-            duration: 0.8,
+            duration: 0.6,
             ease: "power3.out",
             scrollTrigger: {
               trigger: item,
-              start: "top 85%",
+              start: "top 95%",
               toggleActions: "play none none none"
             }
           }

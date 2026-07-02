@@ -68,7 +68,7 @@ header.floating-nav {
   right: 0;
   margin: 0 auto;
   width: calc(100% - 32px);
-  max-w: 1200px;
+  max-width: 1200px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.92) !important;
   backdrop-filter: blur(16px);
@@ -174,10 +174,18 @@ header.floating-nav {
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
-  padding-bottom: 0.25em;
-  margin-bottom: -0.25em;
-  padding-top: 0.1em;
-  margin-top: -0.1em;
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
+  padding-top: 0.05em;
+  margin-top: -0.05em;
+}
+.text-reveal {
+  line-height: 1.35 !important;
+}
+@media (max-width: 640px) {
+  .text-reveal {
+    line-height: 1.45 !important;
+  }
 }
 .reveal-word-inner {
   display: inline-block;
@@ -213,5 +221,17 @@ header.floating-nav {
 .flyer-slide {
   position: relative;
   will-change: transform;
+}
+
+/* Initial hidden states to prevent FOUC (Flash of Unanimated Content) */
+.text-reveal {
+  opacity: 0;
+}
+.clip-reveal-wrap,
+.hero-custom-bg {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+.timeline-item {
+  opacity: 0;
 }
 
